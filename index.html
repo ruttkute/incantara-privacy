@@ -1,0 +1,453 @@
+<title>Incantara Privacy Policy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap">
+
+<style>
+  /* Layout: single-column legal document, dark-first */
+  :root {
+    --bg:       #0D0B14;
+    --surface:  #14111F;
+    --border:   rgba(155, 127, 212, 0.18);
+    --fg:       #E4E0EE;
+    --fg-muted: #9E99AE;
+    --accent:   #9B7FD4;
+    --accent-soft: rgba(155, 127, 212, 0.12);
+    color-scheme: dark;
+
+    --font-display: 'Cormorant Garamond', 'Georgia', serif;
+    --font-body:    'Inter', system-ui, sans-serif;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg:       #F9F7FC;
+      --surface:  #FFFFFF;
+      --border:   rgba(120, 90, 180, 0.15);
+      --fg:       #1A1625;
+      --fg-muted: #6B6480;
+      --accent:   #7B5FC4;
+      --accent-soft: rgba(123, 95, 196, 0.08);
+      color-scheme: light;
+    }
+  }
+
+  :root[data-theme="light"] {
+    --bg:       #F9F7FC;
+    --surface:  #FFFFFF;
+    --border:   rgba(120, 90, 180, 0.15);
+    --fg:       #1A1625;
+    --fg-muted: #6B6480;
+    --accent:   #7B5FC4;
+    --accent-soft: rgba(123, 95, 196, 0.08);
+    color-scheme: light;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+    padding-inline: 20px;
+    padding-block: 0;
+  }
+
+  .page {
+    max-width: 680px;
+    margin-inline: auto;
+    padding-block: 56px 80px;
+  }
+
+  /* Header */
+  .app-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .app-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .app-icon svg {
+    width: 28px;
+    height: 28px;
+    opacity: 0.85;
+  }
+
+  .app-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .app-name {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--fg);
+    line-height: 1.2;
+  }
+
+  .app-package {
+    font-size: 12px;
+    color: var(--fg-muted);
+    font-family: monospace;
+    letter-spacing: 0.03em;
+  }
+
+  /* Page title */
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 6vw, 40px);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.15;
+    text-wrap: balance;
+    margin: 0 0 8px;
+    color: var(--fg);
+  }
+
+  .updated {
+    font-size: 13px;
+    color: var(--fg-muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  /* Intro block */
+  .intro {
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 22px;
+    margin-bottom: 44px;
+    font-size: 14.5px;
+    color: var(--fg-muted);
+    line-height: 1.65;
+  }
+
+  .intro strong {
+    color: var(--fg);
+  }
+
+  /* Sections */
+  section {
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+    margin: 0 0 14px;
+    text-wrap: balance;
+  }
+
+  p {
+    margin: 0 0 14px;
+    color: var(--fg);
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Data table */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+
+  .data-table th {
+    text-align: left;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--fg-muted);
+    font-weight: 500;
+    padding: 0 12px 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .data-table td {
+    padding: 11px 12px 11px 0;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border);
+    color: var(--fg);
+    line-height: 1.5;
+  }
+
+  .data-table td:last-child {
+    color: var(--fg-muted);
+    font-size: 13px;
+    padding-right: 0;
+  }
+
+  .data-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 100px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border: 1px solid var(--border);
+    white-space: nowrap;
+  }
+
+  /* Third-party list */
+  .third-party-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 4px;
+  }
+
+  .third-party-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+  }
+
+  .third-party-name {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: var(--fg);
+  }
+
+  .third-party-desc {
+    font-size: 13.5px;
+    color: var(--fg-muted);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* No-collect callout */
+  .no-collect {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 18px;
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--fg-muted);
+    line-height: 1.6;
+  }
+
+  .no-collect strong {
+    color: var(--fg);
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* Contact */
+  .contact-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 22px;
+  }
+
+  .contact-block p {
+    font-size: 14.5px;
+    color: var(--fg-muted);
+    margin-bottom: 12px;
+  }
+
+  .contact-email {
+    font-family: monospace;
+    font-size: 14px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    display: inline-block;
+    user-select: all;
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 12.5px;
+    color: var(--fg-muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 40px 0;
+  }
+
+  @media (max-width: 480px) {
+    .app-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .footer { flex-direction: column; gap: 4px; }
+  }
+</style>
+
+<div class="page">
+
+  <div class="app-header">
+    <div class="app-icon">
+      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="14,2 17.5,10.5 26.5,11.2 20,17 22,26 14,21.5 6,26 8,17 1.5,11.2 10.5,10.5" fill="none" stroke="#9B7FD4" stroke-width="1.5" stroke-linejoin="round"/>
+        <circle cx="14" cy="14" r="3" fill="#9B7FD4" opacity="0.6"/>
+      </svg>
+    </div>
+    <div class="app-meta">
+      <span class="app-name">Incantara: Witchcraft &amp; Sigils</span>
+      <span class="app-package">cc.visualtools.notte &nbsp;·&nbsp; ruttkute</span>
+    </div>
+  </div>
+
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: October 3, 2026</p>
+
+  <div class="intro">
+    This policy describes how <strong>Incantara: Witchcraft &amp; Sigils</strong> (the app, package ID <strong>cc.visualtools.notte</strong>), developed by <strong>ruttkute</strong>, handles your personal data. We collect only what is necessary to operate the app and do not sell or share your information with advertisers.
+  </div>
+
+  <section>
+    <h2>What We Collect</h2>
+    <div style="overflow-x: auto;">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Source</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Name, email address, profile picture</td>
+            <td><span class="pill">Google Sign-In</span></td>
+            <td>Authentication — to identify your account and display your name</td>
+          </tr>
+          <tr>
+            <td>Subscription status and purchase history</td>
+            <td><span class="pill">RevenueCat</span></td>
+            <td>To verify active subscriptions and grant access to paid features</td>
+          </tr>
+          <tr>
+            <td>Conversation history and app settings</td>
+            <td><span class="pill">Cloudflare KV</span></td>
+            <td>To persist your sessions, preferences, and working history across devices</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="no-collect">
+      <strong>What we do not collect</strong>
+      No location data. No device sensors. No advertising identifiers. No analytics or tracking pixels. No data is sold or shared with advertisers or data brokers, ever.
+    </div>
+  </section>
+
+  <section>
+    <h2>How We Use Your Data</h2>
+    <p>Your data is used only to operate the app for you:</p>
+    <p>Your <strong>Google account details</strong> are used to authenticate you and display your name inside the app. We do not use your email for marketing.</p>
+    <p>Your <strong>subscription status</strong> (managed by RevenueCat) determines which features you can access. We store only the entitlement result, not raw payment card data — payment processing happens entirely within RevenueCat and Google Play.</p>
+    <p>Your <strong>conversation and session data</strong> is stored in Cloudflare KV so the app can recall your history and preferences across sessions. This data is tied to your account and is not shared with other users.</p>
+  </section>
+
+  <section>
+    <h2>Third-Party Services</h2>
+    <p>Incantara uses the following third-party services. Each has its own privacy policy.</p>
+    <div class="third-party-list">
+      <div class="third-party-item">
+        <div class="third-party-name">Google Sign-In (Google LLC)</div>
+        <p class="third-party-desc">Used for authentication. Provides your name, email address, and profile picture to the app after you grant permission. Governed by Google's Privacy Policy.</p>
+      </div>
+      <div class="third-party-item">
+        <div class="third-party-name">RevenueCat</div>
+        <p class="third-party-desc">Used to manage in-app subscriptions. Receives your app user ID and purchase events from Google Play. Governed by RevenueCat's Privacy Policy.</p>
+      </div>
+      <div class="third-party-item">
+        <div class="third-party-name">Cloudflare (Workers &amp; KV)</div>
+        <p class="third-party-desc">Our backend infrastructure. Your requests pass through Cloudflare Workers and your account data is stored in Cloudflare KV. Cloudflare may log standard network metadata (IP address, timestamps) per their infrastructure policies. Governed by Cloudflare's Privacy Policy.</p>
+      </div>
+      <div class="third-party-item">
+        <div class="third-party-name">Groq Cloud</div>
+        <p class="third-party-desc">Used to process natural language queries inside the app. Your queries are sent to Groq's API to generate responses. Governed by Groq's Privacy Policy. We do not store query content beyond your session history in Cloudflare KV.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Data Retention</h2>
+    <p>Your account data (conversation history, preferences) is retained for as long as your account is active. If you request deletion, we will remove your data from Cloudflare KV within 30 days.</p>
+    <p>Subscription records in RevenueCat are governed by RevenueCat's retention policy. We cannot delete records held by third-party billing systems that are required for transaction verification.</p>
+  </section>
+
+  <section>
+    <h2>Your Rights</h2>
+    <p>You may request to access or delete your personal data at any time by contacting us at the address below. To delete your account data, email us with the subject line "Data deletion request" and the email address associated with your Google account.</p>
+    <p>If you are located in the European Union, you have additional rights under the GDPR, including the right to data portability and the right to lodge a complaint with a supervisory authority.</p>
+  </section>
+
+  <section>
+    <h2>Children</h2>
+    <p>Incantara is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal data, please contact us and we will delete it promptly.</p>
+  </section>
+
+  <section>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this policy as the app evolves. Material changes will be noted by updating the "Last updated" date above. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <div class="contact-block">
+      <p>Questions about this privacy policy or requests regarding your personal data:</p>
+      <span class="contact-email">arianela2@gmail.com</span>
+    </div>
+  </section>
+
+  <div class="footer">
+    <span>Incantara: Witchcraft &amp; Sigils &nbsp;·&nbsp; cc.visualtools.notte</span>
+    <span>Developer: ruttkute</span>
+  </div>
+
+</div>
